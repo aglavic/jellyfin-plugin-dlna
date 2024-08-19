@@ -185,8 +185,8 @@ public sealed class PlayToManager : IDisposable
 
             if (device.Properties.Manufacturer=='Sonos, Inc.') 
             {
-                string[] deviceNameComponents = device.Properties.Name.Split(' - ');
-                string deviceName = deviceNameComponents[1]+" ("+deviceNameComponents[0]+")";
+                string[] deviceNameComponents = device.Properties.Name.Split('-');
+                string deviceName = deviceNameComponents[1].Trim()+" ("+deviceNameComponents[0].Trim()+")";
             } else {
                 string deviceName = device.Properties.Name;
             }
