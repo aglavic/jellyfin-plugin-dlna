@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Sonos Speakers</Name>
+  <Identification>
+    <Manufacturer>Sonos, Inc.</Manufacturer>
+  </Identification>
+
+  <Manufacturer>Jellyfin</Manufacturer>
+  <ManufacturerUrl>https://github.com/jellyfin/jellyfin</ManufacturerUrl>
+  <ModelName>Jellyfin Server</ModelName>
+  <ModelDescription>UPnP/AV 1.0 Compliant Media Server</ModelDescription>
+  <ModelNumber>01</ModelNumber>
+  <ModelUrl>https://github.com/jellyfin/jellyfin</ModelUrl>
+  <EnableAlbumArtInDidl>true</EnableAlbumArtInDidl>
+  <EnableSingleAlbumArtLimit>true</EnableSingleAlbumArtLimit>
+  <EnableSingleSubtitleLimit>false</EnableSingleSubtitleLimit>
+
+  <AlbumArtPn>JPEG_SM</AlbumArtPn>
+  <MaxAlbumArtWidth>480</MaxAlbumArtWidth>
+  <MaxAlbumArtHeight>480</MaxAlbumArtHeight>
+  <MaxIconWidth>48</MaxIconWidth>
+  <MaxIconHeight>48</MaxIconHeight>
+  <MaxStreamingBitrate>140000000</MaxStreamingBitrate>
+  <MaxStaticBitrate>140000000</MaxStaticBitrate>
+  <MusicStreamingTranscodingBitrate>192000</MusicStreamingTranscodingBitrate>
+  <MaxStaticMusicBitrate>8000000</MaxStaticMusicBitrate>
+  <ProtocolInfo>http-get:*:video/mpeg:*,http-get:*:video/mp4:*,http-get:*:video/vnd.dlna.mpeg-tts:*,http-get:*:video/avi:*,http-get:*:video/x-matroska:*,http-get:*:video/x-ms-wmv:*,http-get:*:video/wtv:*,http-get:*:audio/mpeg:*,http-get:*:audio/mp3:*,http-get:*:audio/mp4:*,http-get:*:audio/x-ms-wma:*,http-get:*:audio/wav:*,http-get:*:audio/L16:*,http-get:*:image/jpeg:*,http-get:*:image/png:*,http-get:*:image/gif:*,http-get:*:image/tiff:*</ProtocolInfo>
+
+  <TimelineOffsetSeconds>0</TimelineOffsetSeconds>
+  <RequiresPlainVideoItems>false</RequiresPlainVideoItems>
+  <RequiresPlainFolders>false</RequiresPlainFolders>
+  <EnableMSMediaReceiverRegistrar>false</EnableMSMediaReceiverRegistrar>
+  <IgnoreTranscodeByteRangeRequests>false</IgnoreTranscodeByteRangeRequests>
+  <XmlRootAttributes />
+
+  <DirectPlayProfiles>
+    <DirectPlayProfile container="" audioCodec="mp3,wav" videoCodec="" type="Audio" />
+  </DirectPlayProfiles>
+  <TranscodingProfiles>
+    <TranscodingProfile container="mp3" type="Audio" videoCodec="" audioCodec="mp3"  estimateContentLength="true" transcodeSeekInfo="Auto">
+      <Conditions />
+    </TranscodingProfile>
+  </TranscodingProfiles>
+  <ContainerProfiles />
+  <CodecProfiles />
+
+  <SubtitleProfiles>
+    <SubtitleProfile format="srt" method="External" />
+    <SubtitleProfile format="sub" method="External" />
+    <SubtitleProfile format="srt" method="Embed" />
+    <SubtitleProfile format="ass" method="Embed" />
+    <SubtitleProfile format="ssa" method="Embed" />
+    <SubtitleProfile format="smi" method="Embed" />
+    <SubtitleProfile format="dvdsub" method="Embed" />
+    <SubtitleProfile format="pgs" method="Embed" />
+    <SubtitleProfile format="pgssub" method="Embed" />
+    <SubtitleProfile format="sub" method="Embed" />
+    <SubtitleProfile format="subrip" method="Embed" />
+    <SubtitleProfile format="vtt" method="Embed" />
+  </SubtitleProfiles>
+
+</Profile>

@@ -183,7 +183,13 @@ public sealed class PlayToManager : IDisposable
                 return;
             }
 
-            string deviceName = device.Properties.Name;
+            if (device.Properties.Manufacturer=='Sonos, Inc.') 
+            {
+                string[] deviceNameComponents = device.Properties.Name.Split(' - ');
+                string deviceName = deviceNameComponents[1]+" ("+deviceNameComponents[0]+")";
+            } else {
+                string deviceName = device.Properties.Name;
+            }
 
             _sessionManager.UpdateDeviceName(sessionInfo.Id, deviceName);
 
