@@ -186,11 +186,12 @@ public sealed class PlayToManager : IDisposable
             string deviceName;
             if (device.Properties.Manufacturer=="Sonos, Inc.") 
             {
+                _logger.LogInformation("Sonos device: "+device.ToString());
                 string[] deviceNameComponents = device.Properties.Name.Split('-');
                 string[] ignoredDevices = {"10.0.0.211", "10.0.0.222", "10.0.0.223", "10.0.0.224", "10.0.0.232", "10.0.0.233", "10.0.0.234"};
                 if (ignoredDevices.Contains(deviceNameComponents[0].Trim())) {return ;}
-                string deivceRoom = deviceNameComponents[2].Split(' ', 2)[1];
-                deviceName = deviceNameComponents[1].Trim()+" | "+deivceRoom+" ("+deviceNameComponents[0].Trim()+")";
+                string deivceRoom = deviceNameComponents[2].Trim().Split(' ', 2)[1];
+                deviceName = deivceRoom+" | "+deviceNameComponents[1].Trim()+" ("+deviceNameComponents[0].Trim()+")";
             } else {
                 deviceName = device.Properties.Name;
             }
