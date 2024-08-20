@@ -188,7 +188,11 @@ public sealed class PlayToManager : IDisposable
             {
                 _logger.LogInformation("Sonos device: "+device.ToString());
                 _logger.LogInformation("    Properties: "+device.Properties.ToString());
-                _logger.LogInformation("    Services: "+device.Properties.Services.ToString());
+                _logger.LogInformation("    Services: ");
+                foreach(var service_i in device.Properties.Services)
+                {
+                    _logger.LogInformation("                "+service_i.ServiceType);
+                }
                 string[] deviceNameComponents = device.Properties.Name.Split('-');
                 string[] ignoredDevices = {"10.0.0.211", "10.0.0.222", "10.0.0.223", "10.0.0.224", "10.0.0.232", "10.0.0.233", "10.0.0.234"};
                 if (ignoredDevices.Contains(deviceNameComponents[0].Trim())) {return ;}
